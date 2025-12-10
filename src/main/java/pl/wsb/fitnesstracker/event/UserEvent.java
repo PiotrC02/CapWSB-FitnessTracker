@@ -1,35 +1,39 @@
 package pl.wsb.fitnesstracker.event;
 
-
+import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.ToString;
 import pl.wsb.fitnesstracker.user.api.User;
 
 @Entity
-@Table(name = "user_event",
-        uniqueConstraints = @UniqueConstraint(columnNames = {"user_id", "event_id"}))
+@Table(name = "UserEvent")
 @Getter
+@ToString
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class UserEvent {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Nullable
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "user_id", nullable = false)
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "user_id")
     private User user;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "event_id", nullable = false)
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "event_id")
     private Event event;
 
     @Column(name = "status")
-    @Setter
     private String status;
+
+    public UserEvent(final Long id, final User user, final Event event, final String status) {
+        this.id = id;
+        this.user = user;
+        this.event = event;
+        this.status = status;
+    }
 }
-
-

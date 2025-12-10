@@ -14,4 +14,12 @@ class UserMapper {
                 user.getBirthdate(),
                 user.getEmail());
     }
+    User toEntity(UserDto dto) {
+        return new User(
+                dto.firstName(),
+                dto.lastName(),
+                dto.birthdate(),
+                dto.email()
+        );
+    }
 }
