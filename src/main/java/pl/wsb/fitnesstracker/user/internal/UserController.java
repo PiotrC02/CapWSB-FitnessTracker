@@ -3,6 +3,8 @@ package pl.wsb.fitnesstracker.user.internal;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import pl.wsb.fitnesstracker.user.api.UserDto;
+import pl.wsb.fitnesstracker.user.api.UserEmailDto;
+import pl.wsb.fitnesstracker.user.api.UserSimpleDto;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -32,10 +34,10 @@ class UserController {
                 .toList();
     }
     @GetMapping("/simple")
-    public List<UserDto> getAllSimpleUsers() {
+    public List<UserSimpleDto> getAllSimpleUsers() {
         return userService.findAllUsers()
                 .stream()
-                .map(userMapper::toDto)
+                .map(user -> new UserSimpleDto(user.getId(), user.getFirstName(), user.getLastName()))
                 .toList();
     }
     @PostMapping
@@ -46,11 +48,11 @@ class UserController {
         return userMapper.toDto(saved);
     }
     @GetMapping("/email")
-    public List<UserDto> getUserByEmail(@RequestParam String email) {
-        return userService.getUserByEmail(email)
-                .map(userMapper::toDto)
-                .map(List::of)
-                .orElse(List.of());
+    public List<UserEmailDto> getUserByEmail(@RequestParam String email) {
+        return userService.findAllUsersByEmailFragment(email)
+                .stream()
+                .map(user -> new UserEmailDto(user.getId(), user.getEmail()))
+                .toList();
     }
     @GetMapping("/{id}")
     public UserDto getUserById(@PathVariable Long id) {

@@ -8,6 +8,12 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 import pl.wsb.fitnesstracker.user.api.User;
 
+/**
+ * Entity representing the association between a {@link User} and an {@link Event}.
+ * This class maps to the "UserEvent" table and allows tracking the status of
+ * a user's participation in a specific event.
+ */
+
 @Entity
 @Table(name = "UserEvent")
 @Getter

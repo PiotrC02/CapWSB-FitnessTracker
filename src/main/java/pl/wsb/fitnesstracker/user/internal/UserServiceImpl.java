@@ -10,6 +10,14 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Implementation of {@link UserService} and {@link UserProvider} interfaces.
+ * <p>
+ * This service handles the business logic for managing {@link User} entities,
+ * including creation, updates, deletion, and various retrieval operations.
+ * </p>
+ */
+
 @Service
 @Slf4j
 class UserServiceImpl implements UserService, UserProvider {
@@ -66,6 +74,11 @@ class UserServiceImpl implements UserService, UserProvider {
     @Override
     public List<User> findUsersBornBefore(LocalDate date) {
         return userRepository.findBornBefore(date);
+    }
+
+    @Override
+    public List<User> findAllUsersByEmailFragment(final String emailFragment) {
+        return userRepository.findByEmailFragment(emailFragment);
     }
 
 }

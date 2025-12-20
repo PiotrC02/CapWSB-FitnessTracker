@@ -7,6 +7,14 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
+/**
+ * Entity representing a specific physical activity event.
+ * <p>
+ * This class maps to the "event" table and contains details about organized events,
+ * such as their schedule, location, and description.
+ * </p>
+ */
+
 @Entity
 @Table(name = "event")
 @Getter

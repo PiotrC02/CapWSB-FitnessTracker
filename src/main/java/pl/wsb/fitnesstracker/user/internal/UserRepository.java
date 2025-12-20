@@ -16,14 +16,23 @@ interface UserRepository extends JpaRepository<User, Long> {
      * @param email email of the user to search
      * @return {@link Optional} containing found user or {@link Optional#empty()} if none matched
      */
+
     default Optional<User> findByEmail(String email) {
         return findAll().stream()
                 .filter(user -> Objects.equals(user.getEmail(), email))
                 .findFirst();
     }
+
+    default List<User> findByEmailFragment(String emailFragment) {
+        return findAll().stream()
+                .filter(user -> user.getEmail().toLowerCase().contains(emailFragment.toLowerCase()))
+                .toList();
+    }
+
     default List<User> findBornBefore(LocalDate date) {
         return findAll().stream()
                 .filter(user -> user.getBirthdate().isBefore(date))
                 .toList();
     }
+
 }

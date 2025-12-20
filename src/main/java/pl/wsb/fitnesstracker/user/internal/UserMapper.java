@@ -4,6 +4,11 @@ import org.springframework.stereotype.Component;
 import pl.wsb.fitnesstracker.user.api.User;
 import pl.wsb.fitnesstracker.user.api.UserDto;
 
+/**
+ * Mapper component responsible for converting between {@link User} entities
+ * and {@link UserDto} data transfer objects.
+ */
+
 @Component
 class UserMapper {
 
