@@ -10,6 +10,10 @@ import pl.wsb.fitnesstracker.user.api.User;
 
 import java.util.Date;
 
+/**
+ * Entity representing a single training session.
+ */
+
 @Entity
 @Table(name = "trainings")
 @Getter

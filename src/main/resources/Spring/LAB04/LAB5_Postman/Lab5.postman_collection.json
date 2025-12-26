@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "b1e91677-c068-463a-bd7c-d0d1299929b1",
+		"name": "Lab5",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50727105",
+		"_collection_link": "https://piotrc02-429975.postman.co/workspace/Piotr-Cierczek's-Workspace~62051fd7-7730-460a-892a-54a6e1181142/collection/50727105-b1e91677-c068-463a-bd7c-d0d1299929b1?action=share&source=collection_link&creator=50727105"
+	},
+	"item": [
+		{
+			"name": "Trainings",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "All_Trainings",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8091/v1/trainings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"v1",
+								"trainings"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 26 Dec 2025 13:53:06 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"user\": {\n            \"id\": 1,\n            \"firstName\": \"Emma\",\n            \"lastName\": \"Johnson\",\n            \"birthdate\": \"1997-12-26\",\n            \"email\": \"Emma.Johnson@domain.com\"\n        },\n        \"startTime\": \"2024-01-19T07:00:00.000+00:00\",\n        \"endTime\": \"2024-01-19T08:30:00.000+00:00\",\n        \"activityType\": \"RUNNING\",\n        \"distance\": 10.5,\n        \"averageSpeed\": 8.2\n    },\n    {\n        \"id\": 2,\n        \"user\": {\n            \"id\": 2,\n            \"firstName\": \"Ethan\",\n            \"lastName\": \"Taylor\",\n            \"birthdate\": \"1974-12-26\",\n            \"email\": \"Ethan.Taylor@domain.com\"\n        },\n        \"startTime\": \"2024-01-18T14:30:00.000+00:00\",\n        \"endTime\": \"2024-01-18T16:00:00.000+00:00\",\n        \"activityType\": \"CYCLING\",\n        \"distance\": 25,\n        \"averageSpeed\": 18.5\n    },\n    {\n        \"id\": 3,\n        \"user\": {\n            \"id\": 3,\n            \"firstName\": \"Olivia\",\n            \"lastName\": \"Davis\",\n            \"birthdate\": \"1949-12-26\",\n            \"email\": \"Olivia.Davis@domain.com\"\n        },\n        \"startTime\": \"2024-01-17T06:45:00.000+00:00\",\n        \"endTime\": \"2024-01-17T08:00:00.000+00:00\",\n        \"activityType\": \"WALKING\",\n        \"distance\": 5.2,\n        \"averageSpeed\": 5.8\n    },\n    {\n        \"id\": 4,\n        \"user\": {\n            \"id\": 4,\n            \"firstName\": \"Daniel\",\n            \"lastName\": \"Thomas\",\n            \"birthdate\": \"1991-12-26\",\n            \"email\": \"Daniel.Thomas@domain.com\"\n        },\n        \"startTime\": \"2024-01-16T17:00:00.000+00:00\",\n        \"endTime\": \"2024-01-16T18:30:00.000+00:00\",\n        \"activityType\": \"RUNNING\",\n        \"distance\": 12.3,\n        \"averageSpeed\": 9\n    },\n    {\n        \"id\": 5,\n        \"user\": {\n            \"id\": 5,\n            \"firstName\": \"Sophia\",\n            \"lastName\": \"Baker\",\n            \"birthdate\": \"1976-12-26\",\n            \"email\": \"Sophia.Baker@domain.com\"\n        },\n        \"startTime\": \"2024-01-15T11:30:00.000+00:00\",\n        \"endTime\": \"2024-01-15T12:45:00.000+00:00\",\n        \"activityType\": \"CYCLING\",\n        \"distance\": 18.7,\n        \"averageSpeed\": 15.3\n    },\n    {\n        \"id\": 6,\n        \"user\": {\n            \"id\": 6,\n            \"firstName\": \"Liam\",\n            \"lastName\": \"Jones\",\n            \"birthdate\": \"2002-12-26\",\n            \"email\": \"Liam.Jones@domain.com\"\n        },\n        \"startTime\": \"2024-01-14T08:00:00.000+00:00\",\n        \"endTime\": \"2024-01-14T09:15:00.000+00:00\",\n        \"activityType\": \"WALKING\",\n        \"distance\": 3.5,\n        \"averageSpeed\": 4\n    },\n    {\n        \"id\": 7,\n        \"user\": {\n            \"id\": 7,\n            \"firstName\": \"Ava\",\n            \"lastName\": \"Williams\",\n            \"birthdate\": \"2004-12-26\",\n            \"email\": \"Ava.Williams@domain.com\"\n        },\n        \"startTime\": \"2024-01-13T15:45:00.000+00:00\",\n        \"endTime\": \"2024-01-13T17:30:00.000+00:00\",\n        \"activityType\": \"RUNNING\",\n        \"distance\": 15,\n        \"averageSpeed\": 10.8\n    },\n    {\n        \"id\": 8,\n        \"user\": {\n            \"id\": 8,\n            \"firstName\": \"Noah\",\n            \"lastName\": \"Miller\",\n            \"birthdate\": \"1986-12-26\",\n            \"email\": \"Noah.Miller@domain.com\"\n        },\n        \"startTime\": \"2024-01-12T10:30:00.000+00:00\",\n        \"endTime\": \"2024-01-12T11:45:00.000+00:00\",\n        \"activityType\": \"CYCLING\",\n        \"distance\": 22.5,\n        \"averageSpeed\": 17.2\n    },\n    {\n        \"id\": 9,\n        \"user\": {\n            \"id\": 9,\n            \"firstName\": \"Grace\",\n            \"lastName\": \"Anderson\",\n            \"birthdate\": \"1992-12-26\",\n            \"email\": \"Grace.Anderson@domain.com\"\n        },\n        \"startTime\": \"2024-01-11T06:15:00.000+00:00\",\n        \"endTime\": \"2024-01-11T07:30:00.000+00:00\",\n        \"activityType\": \"WALKING\",\n        \"distance\": 4.2,\n        \"averageSpeed\": 4.5\n    },\n    {\n        \"id\": 10,\n        \"user\": {\n            \"id\": 10,\n            \"firstName\": \"Oliver\",\n            \"lastName\": \"Swift\",\n            \"birthdate\": \"1996-12-26\",\n            \"email\": \"Oliver.Swift@domain.com\"\n        },\n        \"startTime\": \"2024-01-10T13:00:00.000+00:00\",\n        \"endTime\": \"2024-01-10T14:15:00.000+00:00\",\n        \"activityType\": \"RUNNING\",\n        \"distance\": 11.8,\n        \"averageSpeed\": 8.5\n    }\n]"
+				},
+				{
+					"name": "ID_1_Trainings",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8091/v1/trainings/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"v1",
+								"trainings",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 26 Dec 2025 13:54:24 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"user\": {\n            \"id\": 1,\n            \"firstName\": \"Emma\",\n            \"lastName\": \"Johnson\",\n            \"birthdate\": \"1997-12-26\",\n            \"email\": \"Emma.Johnson@domain.com\"\n        },\n        \"startTime\": \"2024-01-19T07:00:00.000+00:00\",\n        \"endTime\": \"2024-01-19T08:30:00.000+00:00\",\n        \"activityType\": \"RUNNING\",\n        \"distance\": 10.5,\n        \"averageSpeed\": 8.2\n    }\n]"
+				}
+			]
+		}
+	]
+}
