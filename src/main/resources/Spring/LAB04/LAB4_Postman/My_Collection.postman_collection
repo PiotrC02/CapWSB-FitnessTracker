@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "7a10a211-3ae7-4412-a4e7-12a03d14c00e",
+		"name": "My Collection",
+		"description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50727105",
+		"_collection_link": "https://piotrc02-429975.postman.co/workspace/Piotr-Cierczek's-Workspace~62051fd7-7730-460a-892a-54a6e1181142/collection/50727105-7a10a211-3ae7-4412-a4e7-12a03d14c00e?action=share&source=collection_link&creator=50727105"
+	},
+	"item": [
+		{
+			"name": "Get data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": [
+				{
+					"name": "Mikolaj_Swiety",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8091/v1/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"v1",
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 26 Dec 2025 11:52:46 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"firstName\": \"Emma\",\n        \"lastName\": \"Johnson\",\n        \"birthdate\": \"1997-12-26\",\n        \"email\": \"Emma.Johnson@domain.com\"\n    },\n    {\n        \"id\": 2,\n        \"firstName\": \"Ethan\",\n        \"lastName\": \"Taylor\",\n        \"birthdate\": \"1974-12-26\",\n        \"email\": \"Ethan.Taylor@domain.com\"\n    },\n    {\n        \"id\": 3,\n        \"firstName\": \"Olivia\",\n        \"lastName\": \"Davis\",\n        \"birthdate\": \"1949-12-26\",\n        \"email\": \"Olivia.Davis@domain.com\"\n    },\n    {\n        \"id\": 4,\n        \"firstName\": \"Daniel\",\n        \"lastName\": \"Thomas\",\n        \"birthdate\": \"1991-12-26\",\n        \"email\": \"Daniel.Thomas@domain.com\"\n    },\n    {\n        \"id\": 5,\n        \"firstName\": \"Sophia\",\n        \"lastName\": \"Baker\",\n        \"birthdate\": \"1976-12-26\",\n        \"email\": \"Sophia.Baker@domain.com\"\n    },\n    {\n        \"id\": 6,\n        \"firstName\": \"Liam\",\n        \"lastName\": \"Jones\",\n        \"birthdate\": \"2002-12-26\",\n        \"email\": \"Liam.Jones@domain.com\"\n    },\n    {\n        \"id\": 7,\n        \"firstName\": \"Ava\",\n        \"lastName\": \"Williams\",\n        \"birthdate\": \"2004-12-26\",\n        \"email\": \"Ava.Williams@domain.com\"\n    },\n    {\n        \"id\": 8,\n        \"firstName\": \"Noah\",\n        \"lastName\": \"Miller\",\n        \"birthdate\": \"1986-12-26\",\n        \"email\": \"Noah.Miller@domain.com\"\n    },\n    {\n        \"id\": 9,\n        \"firstName\": \"Grace\",\n        \"lastName\": \"Anderson\",\n        \"birthdate\": \"1992-12-26\",\n        \"email\": \"Grace.Anderson@domain.com\"\n    },\n    {\n        \"id\": 10,\n        \"firstName\": \"Oliver\",\n        \"lastName\": \"Swift\",\n        \"birthdate\": \"1996-12-26\",\n        \"email\": \"Oliver.Swift@domain.com\"\n    },\n    {\n        \"id\": 11,\n        \"firstName\": \"Mikołaj\",\n        \"lastName\": \"Święty\",\n        \"birthdate\": \"1958-12-26\",\n        \"email\": \"Mikołaj.Święty@domain.com\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Post data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+							"});",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Add your name in the body\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": ""
+				},
+				"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+			},
+			"response": []
+		}
+	]
+}
